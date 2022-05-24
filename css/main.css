@@ -1,0 +1,883 @@
+/* Import the Google Fonts to be used into the project */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: #fff;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+
+    -webkit-font-smooth: always;
+    font-size: 62.5%;
+    outline: none;
+}
+
+body {
+    /* Override the font-family defined by font-awsome */
+    font-family: 'Roboto', sans-serif;
+    /* Hide the horizontal scroll when the elements doesn't fit with the viewport*/
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    text-align: center;
+    letter-spacing: -1.56px;
+    color: #4e9434;
+    margin: 80px 0 10px 0;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: -0.36px;
+    color: #000000;
+    margin: 10px 0 15px 0;
+}
+
+.container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* adjusted container for all devices (Viewports and breakpoints) */
+.container-fluid {
+    width: 100%;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.center-txt {
+    text-align: center;
+}
+
+.left-txt {
+    text-align: left;
+}
+
+.right-txt {
+    text-align: right;
+}
+
+.bold-txt {
+    font-weight: 700;
+}
+
+.italic-txt {
+    font-style: italic;
+}
+
+.background {
+    background-color: transparent;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*------------------------ MAIN HEADER ----------------------------*/
+/*-----------------------------------------------------------------*/
+
+.main-header {
+    background-color: #fff;
+    padding-top: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.logo {
+    margin: 0 0 5px 0;
+    width: 110px;
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------------- FORM SECTION --------------------------*/
+/*-----------------------------------------------------------------*/
+
+.form-section {
+    max-width: 100%;
+    height: auto;
+    margin-top: 112px;
+    background: url('../files/business.jpg');
+    background-repeat: no-repeat;
+
+    /* contain para que a imagem fique à escala da janela do browser */
+    background-size: contain;
+    background-position: center;
+}
+
+.form-container {
+    position: relative;
+    left: 20%;
+    max-width: 350px;
+    margin-bottom: 10px;
+    background-color: #D8E191;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.col-2form {
+    position: relative;
+    flex: 0 50%;
+}
+
+.form-container h4 {
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Aplica o estilo ao 1º parágrafo do form-container */
+.form-container p:nth-of-type(1) {
+    padding: 4px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.6rem;
+    background-color: #C40265;
+}
+
+/* Aplica o estilo ao 2º parágrafo do form-container */
+.form-container p:nth-of-type(2) {
+    font-size: 14px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-request {
+    padding: 0 20px 0 20px;
+}
+
+.submit-form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 1em 1em;
+}
+
+.submit-form>label {
+    font-size: 12px;
+    color: #837f7f;
+}
+
+.submit-form input {
+    font: 10px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.form-control {
+    width: 100%;
+    height: 30px;
+    border: 0;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.conditions {
+    font-size: 12px;
+}
+
+.conditions ul {
+    padding: 0px;
+    list-style: none;
+}
+
+.conditions li {
+    padding-top: 10px;
+}
+
+.btn-submit {
+    font-size: 1.4rem;
+    width: 90%;
+    height: 35px;
+    line-height: normal;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 50%);
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #c40265;
+    border: none;
+}
+
+.btn-submit:hover,
+.request button:hover {
+    font-weight: 700;
+    background-color: #FFFFFF;
+    color: #c40265;
+    cursor: pointer;
+    border: 2px solid #c40265;
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------------- BASKETS  ------------------------------*/
+/*-----------------------------------------------------------------*/
+
+.header-baskets h1~p {
+    line-height: 32px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    color: #808080;
+}
+
+.col-3baskets {
+    position: relative;
+    /* set the flex basis for the number of columns
+    100 / numColunas --- 100/3 = 33.3333% */
+    flex: 0 33.3333%;
+    /* keep away the columns of each others*/
+    border: 15px solid #f5f7e2;
+    background-color: #fff;
+    border-radius: 25px 25px 25px 25px;
+    height: 520px;
+}
+
+.baskets {
+    padding: 75px;
+    background-color: #f5f7e2;
+}
+
+.baskets .col-3baskets:hover {
+    /* set the properties for transition/animation */
+    transition: all 0.3s ease 0s;
+    /* reposition an element in vertical(-45px)*/
+    transform: translateY(-45px);
+}
+
+.size-s,
+.size-m,
+.size-l {
+    font-weight: 700;
+    font-size: 3.2rem;
+    padding: 8px;
+}
+
+.size-s {
+    color: #D8E191;
+}
+
+.size-m {
+    color: #FFD24A;
+}
+
+.size-l {
+    color: #4B9231;
+}
+
+.reviews {
+    font-weight: 700;
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 4px;
+    color: #cccccc;
+}
+
+.checked {
+    color: orange;
+}
+
+.non-checked {
+    color: orange;
+    opacity: 30%;
+}
+
+.price-s,
+.price-m,
+.price-l {
+    text-align: center;
+    font-weight: 700;
+    padding: 8px;
+    margin-top: 25px;
+
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.81px;
+    color: #000000;
+}
+
+.price-s {
+    border: 6px solid #D8E191;
+}
+
+.price-m {
+    border: 6px solid #ffebae;
+}
+
+.price-l {
+    border: 6px solid #a4c898;
+}
+
+.top-sales {
+    position: absolute;
+    background-color: #edb0cf;
+    border: 1px solid #c40265;
+    padding: 10px 10px;
+
+    font-size: 13px;
+
+    height: 70px;
+    width: 70px;
+    right: 20px;
+    top: 10px;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: -0.81px;
+    color: #c40265;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.basket-description {
+    height: 50px;
+}
+
+.img-baskets {
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*-----------------------------------------------------------------*/
+/*----------------------------- ABOUT US --------------------------*/
+/*-----------------------------------------------------------------*/
+.about h1~p {
+    line-height: 32px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    color: #808080;
+}
+
+
+.col-3 {
+    position: relative;
+    flex: 0 33.3333%;
+    background-color: #f5f7e2;
+    border: 15px solid #fff;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.col-3img {
+    position: relative;
+    flex: 0 33.3333%;
+    background-color: transparent;
+    border: 15px solid #fff;
+    border-radius: 40px 40px 40px 40px;
+}
+
+
+.about h2 {
+    text-align: center;
+    font-size: 1.88rem;
+    margin-top: 50px;
+    color: #4B9231;
+    opacity: 80%;
+}
+
+.about h2~p {
+    text-align: left;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+    padding: 20px;
+    color: #000000;
+}
+
+
+/*-----------------------------------------------------------------*/
+/*------------------------------ FEEDBACK -------------------------*/
+/*-----------------------------------------------------------------*/
+
+.col-2 {
+    position: relative;
+    flex: 0 50%;
+    background-color: #fffcf7;
+    border: 15px solid #fff;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.feedback h1~p {
+    line-height: 32px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    color: #808080;
+}
+
+.feedback h2 {
+    text-align: left;
+    font-size: 1.88rem;
+    padding-left: 150px;
+    padding-right: 10px;
+    margin-top: 100px;
+    color: #000000;
+}
+
+.feedback h2~p {
+    letter-spacing: -0.36px;
+    padding-bottom: 35px;
+    color: #000000;
+}
+
+.img-container {
+    text-align: center;
+    height: 50px;
+}
+
+.img-feedback {
+    position: relative;
+    top: -45px;
+}
+
+.aspas-esq img,
+.aspas-dir img {
+    max-width: 60px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aspas-dir {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------------------- CLIENTS  ------------------------*/
+/*-----------------------------------------------------------------*/
+.clients h1~p {
+    line-height: 32px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    color: #808080;
+}
+
+.col-2 left-txt h2 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 44px;
+    letter-spacing: -1.56px;
+    color: #4e9434;
+}
+
+/* Slider Animation */
+@keyframes clientsAnimation {
+    0% {
+        left: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    100% {
+        left: 100%;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.slides {
+    padding: 40px 0;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.slides-container {
+    width: calc(15vw * 7);
+    position: relative;
+    white-space: nowrap;
+    animation: clientsAnimation 15s linear 2s infinite alternate-reverse;
+}
+
+.slides-container a {
+    display: inline-block;
+    width: 15vw;
+    margin: 45px 0;
+    text-align: center;
+}
+
+.slides-container img {
+    object-fit: contain;
+    filter: grayscale();
+    transition: filter 0.3s ease 0s;
+    max-width: 90%;
+    height: 75px;
+}
+
+.slides-container img:hover {
+    filter: none;
+}
+
+.navi-slider {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    /* bolas sempre ao centro */
+    width: 100%;
+    width: calc(100% - 100px);
+}
+
+.navi-slider a {
+    display: block;
+    /*fica sempre no mesmo local */
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    /* faz uma bola certinha juntamente com a width e height */
+    background-color: #fff;
+    margin-right: 20px;
+
+    transition: all .3s ease-out;
+}
+
+.navi-slider a:hover {
+    background-color: #88BE4C;
+    width: 24px;
+    height: 24px;
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------  Frequently Asked Questions ------------------*/
+/*-----------------------------------------------------------------*/
+.questions {
+    margin-bottom: 70px;
+}
+
+.accordion-button {
+    font-size: 1.88rem;
+    font-weight: 400;
+    color: #808080;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f5f7e2;
+    color: #000000;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+}
+
+.accordion-button:not(.collapsed)::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: url('../files/vetorAccordion.svg');
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(245, 247, 226, 255);
+}
+
+.accordion-body {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1rem 3.6rem;
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------------- Fruit Request -------------------------*/
+/*-----------------------------------------------------------------*/
+.request {
+    background-color: #D8E191;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.request h1 {
+    font-size: 4.8rem;
+    line-height: 52px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -2.06px;
+    color: #FFFFFF;
+}
+
+.request button {
+    position: relative;
+    margin-top: 37px;
+    margin-bottom: 45px;
+    background-color: #c40265;
+    border: 1px solid #c40265;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+    color: #fff;
+
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 22px;
+
+    letter-spacing: -0.7725px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 50%);
+}
+
+/*-----------------------------------------------------------------*/
+/*------------------------------ FOOTER ---------------------------*/
+/*-----------------------------------------------------------------*/
+.main-footer {
+    background-color: #f3f3f3;
+    min-width: 80px;
+    padding: 5px;
+}
+
+.main-footer a {
+    font-size: 1.6rem;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.36px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-footer a:hover {
+    color: #c40265;
+}
+
+.main-footer p {
+    font-weight: 400;
+    padding-top: 15px;
+}
+
+
+/* ---------------------------------------------------------------------*/
+/* ------------------------------ Media Queries-------------------------*/
+/* ---------------------------------------------------------------------*/
+@media (min-width:1060px) {
+    html {
+        font-size: 65%;
+    }
+}
+
+@media (max-width:1200px) {
+
+    html {
+        font-size: 62.5%;
+    }
+
+    .logo {
+        width: 115px;
+    }
+
+    .col-3baskets {
+        flex: 0 50%;
+    }
+
+    .center-txt {
+        margin: 0 auto;
+    }
+
+    .col-3 {
+        flex: 0 50%;
+        order: 2;
+    }
+
+    .col-3img {
+        flex: 0 100%;
+        order: 1;
+        text-align: center;
+    }
+
+    .img-cover {
+        max-width: 400px;
+    }
+
+    .slides-container {
+        width: calc(20vw * 7);
+    }
+
+    .slides-container a {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .col-3baskets {
+        flex: 0 75%;
+    }
+
+    .col-2 {
+        flex: 0 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    h1 {
+        margin: 50px 0 10px 0;
+    }
+
+    .col-3baskets {
+        flex: 0 100%;
+    }
+
+    .request h1 {
+        font-size: 4rem;
+    }
+
+    .slides {
+        padding: 0;
+
+    }
+
+    .slides-container {
+        width: calc(30vw * 7);
+    }
+
+    .slides-container a {
+        width: 30vw;
+    }
+}
+
+@media (min-width:451px) and (max-width:550px) {
+
+    h1 {
+        font-size: 3.2rem;
+        margin: 50px 0 10px 0;
+    }
+
+    .form-section {
+        background: none;
+    }
+
+    .col-2form {
+        flex: 0 100%;
+    }
+
+    .form-container {
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .about .container,
+    .feedback .container {
+        padding: 0 50px;
+    }
+
+    .col-3 {
+        flex: 0 100%;
+    }
+
+    .slides {
+        padding: none;
+    }
+
+    .slides-container {
+        width: calc(45vw * 7);
+    }
+
+    .slides-container a {
+        width: 45vw;
+    }
+
+
+}
+
+@media (max-width:450px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .logo {
+        top: 20px;
+        width: 110px;
+        left: 20px
+    }
+
+    .form-section {
+        background: none;
+    }
+
+    .col-2form {
+        flex: 0 100%;
+    }
+
+    .form-container {
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .col-3 {
+        flex: 0 100%;
+    }
+
+    .baskets .container {
+        padding: 0px;
+    }
+
+    .aspas-esq img,
+    .aspas-dir img {
+        max-width: 50px;
+    }
+}
+
+@media (min-width:320px) and (max-width:380px) {
+
+    .logo {
+        width: 100px;
+    }
+
+    .baskets {
+        padding: 25px;
+    }
+
+    .container {
+        padding: 0 25px;
+    }
+
+    .btn-submit {
+        font-size: 1.2rem;
+    }
+
+    .aspas-esq img,
+    .aspas-dir img {
+        max-width: 40px;
+    }
+
+    .request h1 {
+        font-size: 3.6rem;
+    }
+
+    .request button {
+        font-size: 1.5rem;
+    }
+}
